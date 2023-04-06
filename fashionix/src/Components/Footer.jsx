@@ -3,7 +3,7 @@ import React from "react";
 
 export const  Footer=()=> {
     return (
-        <Box height="500px">
+        <Box height="500px" color={"black"}>
             <Flex align="center" justify="center" mt="15%">
                 <Text
                     fontSize="md"

@@ -25,7 +25,7 @@ export const Navbar = () => {
     const [placement, setPlacement] = useState("left");
     const toast = useToast();
     return (
-        <Flex bgColor="transparent" pos="fixed" top={0} w="100%" zIndex={2}>
+        <Flex bg="transparent"  pos="fixed" top={0} w="100%" zIndex={2}>
             <Flex p="2" gap={[3, 6, 24]}>
                 <Box style={{ cursor: "pointer" }} p={2}>
                     <Button onClick={() => onOpen()} m={1} bg="transparent" color={"grey"} >
@@ -44,7 +44,7 @@ export const Navbar = () => {
                             <DrawerCloseButton />
 
                             <DrawerHeader ml={[0, 0, 12]}>
-                                <Image src="https://cdn.mos.cms.futurecdn.net/UkabSwd9CX7buvuAztJG8J-320-80.jpg" width="300px" alt="sara" />
+                                <Image src="https://cdn.mos.cms.futurecdn.net/UkabSwd9CX7buvuAztJG8J-320-80.jpg" width="300px" alt="sara" overflow={"hidden"} />
                             </DrawerHeader>
 
                             <DrawerBody>

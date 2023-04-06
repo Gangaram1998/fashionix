@@ -72,7 +72,7 @@ function Sidebar() {
                             {nam &&
                                 nam.map((el, ind) => {
                                     return (
-                                        <Text key={ind} fontSize="xs" fontWeight={400}>
+                                        <Text key={ind} fontSize="xs" fontWeight={400} marginTop={"12px"}>
                                             <Link to="/women">{el}</Link>
                                         </Text>
                                     );
