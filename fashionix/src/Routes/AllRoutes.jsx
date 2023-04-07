@@ -6,7 +6,7 @@ import { Womens } from '../pages/Womens'
 import { PageNotFound } from '../pages/PageNotFound'
 import { Cart } from '../pages/Cart'
 import { WomenSinglePage } from '../pages/WomenSinglePage'
-import { Checkout } from '../pages/CheckoutPage'
+import { CheckOutPage } from '../pages/CheckOutPage'
 
 export const AllRoutes = () => {
   return (
@@ -17,7 +17,7 @@ export const AllRoutes = () => {
       <Route path='/women/:id' element={<WomenSinglePage/>}></Route>
       <Route path='/cart' element={<Cart/>}></Route>
       <Route path='*' element={<PageNotFound/>}/>
-      <Route path='/checkout' element={<Checkout/>}></Route>
+      <Route path='/checkout' element={<CheckOutPage/>}></Route>
     </Routes>
   )
 }

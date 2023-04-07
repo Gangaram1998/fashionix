@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   Box,
   Button,
@@ -9,16 +9,24 @@ import {
   Center,
   useToast,
 } from "@chakra-ui/react";
-import { Link, Navigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
-import {Footer} from "../Components/Footer";
+import { Footer } from "../Components/Footer";
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
+
 
 export const Login = () => {
+  const navigate = useNavigate()
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const toast = useToast();
+  const SigninUser = () => {
+    navigate("/women")
+  }
+
   return (
     <Box color={"black"} bg={"white"}>
       <Box
@@ -35,7 +43,7 @@ export const Login = () => {
               <FormControl isRequired>
                 <label>Email</label>
                 <Input
-                marginTop={"-10px"}
+                  marginTop={"-10px"}
                   border={"none"}
                   // borderRadius="10px"
                   borderColor="black"
@@ -74,7 +82,7 @@ export const Login = () => {
                   padding="0px"
                   value={password}
                   color={"black"}
-                  
+
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </FormControl>
@@ -87,7 +95,7 @@ export const Login = () => {
                 bg={"black"}
                 color={"white"}
                 _hover={{ bg: "grey", color: "white" }}
-                // onClick={singinUser}
+                onClick={SigninUser}
               >
                 LOG IN
               </Button>

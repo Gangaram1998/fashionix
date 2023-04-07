@@ -3,7 +3,7 @@ import {Footer} from "../Components/Footer";
 import {BackdropExample} from "./Payment";
 import {Visa} from "./VisaModal";
 
-export const Checkout=()=> {
+export const CheckOutPage=()=> {
     let lData = JSON.parse(localStorage.getItem("Data"));
     return (
         <Box>
